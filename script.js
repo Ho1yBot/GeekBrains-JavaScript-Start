@@ -109,9 +109,9 @@
 // Задание 1
 // Создайте функцию которая возводит переданное число в куб, необходимо вывести в консоль результат 2^3 степени + 3 ^ 3 степени
 
-function numToThree(){
+function numToThree() {
     const number = prompt("Введите число для возведения его в степень 3")
-    return alert(number**3 + 3**3);
+    return alert(number ** 3 + 3 ** 3);
 }
 
 
@@ -119,12 +119,12 @@ function numToThree(){
 // Пользователь вводит с клавиатуры число, если ввёл текст, необходимо вывести что значение задано неверно
 // Создать фукнцию, которая высчитывает 13% от данного числа и выводит в консоль текст "Размер заработной платы за вычетом налогов равен значение"
 
-function salaryWithoutTax(){
+function salaryWithoutTax() {
     let salary = Number(prompt("Введите свою зарплату"));
-    if (!isNaN(salary)){
-        alert(`Ваша зарплата с учётом налога ${salary*0.87}`)
+    if (!isNaN(salary)) {
+        alert(`Ваша зарплата с учётом налога ${salary * 0.87}`)
     }
-    else{
+    else {
         alert("Пошёл вон!");
     }
 }
@@ -132,14 +132,14 @@ function salaryWithoutTax(){
 // Задание 3
 // Пользователь с клавиатуры вводит 3 числа, необходимо создать функцию, которая определяет максимальное значение среди этих чисел
 
-function maxAmongThree(){
+function maxAmongThree() {
     let array = [];
     const firstNum = array.push(+prompt("Введите,пожалуйста, певрое число, умоляю вас!!!"));
     const secondNum = array.push(+prompt("Введите,пожалуйста, второе число, умоляю вас!!!"));
     const thirdNum = array.push(+prompt("Введите,пожалуйста, третье число, умоляю вас!!!"));
     let max = -Infinity;
-    for (let count = 0; count < array.length; count++){
-        if (max <= array[count]){
+    for (let count = 0; count < array.length; count++) {
+        if (max <= array[count]) {
             max = array[count];
         }
     }
@@ -154,25 +154,25 @@ function maxAmongThree(){
 // 4. Деление
 // Необходимо сделать так, чтобы функция вернула число, например выражение console.log(sum(2, 6)); должно вывести число 8 в консоль (sum - функция сложения в данном примере, ваши названия функций могут отличаться). Округлять значения, которые возвращают функции не нужно, однако, обратите внимание на разность, функция должна вычесть из большего числа меньшее, либо вернуть 0, если числа равны. Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать не нужно.
 
-function allFunc(){
+function allFunc() {
     const num1 = Number(prompt());
     const num2 = Number(prompt());
-    function sum(num1, num2){
+    function sum(num1, num2) {
         alert(num1 + num2);
     }
-    function dif(num1, num2){
+    function dif(num1, num2) {
         alert(num1 - num2);
     }
-    function mult(num1, num2){
-        alert(num1*num2);
+    function mult(num1, num2) {
+        alert(num1 * num2);
     }
-    function div(num1,num2){
-        alert(num1/num2);
+    function div(num1, num2) {
+        alert(num1 / num2);
     }
     sum(num1, num2);
     dif(num1, num2);
     mult(num1, num2);
-    div(num1,num2);
+    div(num1, num2);
 }
 
 // Задание 1
@@ -184,17 +184,17 @@ function allFunc(){
 // …
 // 10 – четное число
 
-function definer(){
-    for (let i = 0; i < 11; i++ ){
-        if (i === 0){
+function definer() {
+    for (let i = 0; i < 11; i++) {
+        if (i === 0) {
             console.log(`${i} - это ноль`);
         }
         else if (i % 2 === 0) {
-            console.log(`${i} - чётное число`);            
+            console.log(`${i} - чётное число`);
         }
-        else{
+        else {
             console.log(`${i} - нечетное число`);
-        }    
+        }
     }
 }
 
@@ -202,11 +202,11 @@ function definer(){
 // Дан массив [1, 2, 3, 4, 5, 6, 7]
 // Сделайте из этого массива следующий [1, 2, 3, 6, 7]
 
-function sliceOfArray(){
+function sliceOfArray() {
     const array = [1, 2, 3, 4, 5, 6, 7];
     alert(`Исходны массив: ${array}`);
-    array.splice(3,2);
-    alert(`Преобразованный массив: ${array}`); 
+    array.splice(3, 2);
+    alert(`Преобразованный массив: ${array}`);
 }
 
 // Задание 3
@@ -224,10 +224,10 @@ function generateRandomArray() {
     for (let i = 0; i < length; i++) {
         const randomNum = Math.floor(Math.random() * 10); // Генерируем случайное число от 0 до 9
         sum += randomNum;
-        if (randomNum <= min){
+        if (randomNum <= min) {
             min = randomNum;
         }
-        if (randomNum === 3){
+        if (randomNum === 3) {
             count++;
         }
         randomArray.push(randomNum); // Добавляем число в массив
@@ -247,8 +247,162 @@ function generateRandomArray() {
 // xxxx
 // xxxxx
 
-function outputMoiuntain(){
-    for (let i = 1; i <= 20; i++){
+function outputMoiuntain() {
+    for (let i = 1; i <= 20; i++) {
         console.log("x".repeat(i));
     }
+}
+
+// Задание 1
+// Дан объект numbers. Необходимо в консоль вывести все значения больше или равные 3.
+
+function allMoreThreeInObject() {
+    const numbers = {
+        keyin1: 1,
+        keyin2: 2,
+        keyin3: 3,
+        keyin4: 4,
+        keyin5: 5,
+        keyin6: 6,
+        keyin7: 7,
+    }
+    for (const keys in numbers) {
+        if (numbers[keys] >= 3) {
+            console.log(keys);
+        }
+        else {
+            continue;
+        }
+    }
+}
+
+
+
+// Задание 2
+// Необходимо из объекта, который лежит в константе post вывести значения, к которым приписан комментарий, в консоль.
+
+function printerOfLines() {
+    const post = {
+        author: "John", // вывести этот текст
+        postId: 23,
+        comments: [
+            {
+                userId: 10,
+                userName: "Alex",
+                text: "lorem ipsum",
+                rating: {
+                    likes: 10,
+                    dislikes: 2, // вывести это число
+                },
+            },
+            {
+                userId: 5, // вывести это число
+                userName: "Jane",
+                text: "lorem ipsum 2", // вывести этот текст
+                rating: {
+                    likes: 3,
+                    dislikes: 1,
+                },
+            },
+        ],
+    };
+    console.log(post.author);
+    console.log(post.comments[0].rating.dislikes); // Выводит: 2
+    console.log(post.comments[1].userId); // Выводит: 5
+    console.log(post.comments[1].text);
+}
+
+// Задание 3
+// Дан массив products, необходимо цену каждого продукта уменьшить на 15% используя метод forEach.
+
+function minusFiveteenProcent() {
+    const products = [
+        {
+            id: 3,
+            price: 200,
+        },
+        {
+            id: 4,
+            price: 900,
+        },
+        {
+            id: 1,
+            price: 1000,
+        },
+    ];
+    products.forEach(product => {
+        product.price = product.price * 0.85;
+    });
+    console.log(products);
+}
+
+
+// Задание 4
+// 1. Необходимо вывести в консоль массив продуктов в котором есть хоть одна фотография используя метод filter. Исходные данные - массив products.
+// 2. Необходимо отсортировать массив products используя метод sort по цене, начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести отсортированный массив в консоль.
+
+function filterAndSort() {
+    const products = [
+        {
+            id: 3,
+            price: 127,
+            photos: [
+                "1.jpg",
+                "2.jpg",
+            ],
+        },
+        {
+            id: 5,
+            price: 499,
+            photos: [],
+        },
+        {
+            id: 10,
+            price: 26,
+            photos: [
+                "3.jpg",
+            ],
+        },
+        {
+            id: 8,
+            price: 78,
+        },
+    ];
+
+    const arrayPhoto = [];
+    arrayPhoto.push(products.filter(item => item.photos && item.photos.length > 0))
+    console.log(arrayPhoto);
+
+    // Копируем исходный массив
+    const sortedProducts = products.slice();
+
+    // Функция сравнения для метода sort
+    const comparePrices = (productA, productB) => {
+        return productA.price - productB.price;
+    };
+
+    // Сортировка копии массива sortedProducts по цене
+    sortedProducts.sort(comparePrices);
+
+    // Вывод отсортированного массива в консоль
+    console.log(sortedProducts);
+
+}
+
+
+// **Задание 5**
+// Дано 2 массива
+// Вам необходимо объединить 2 этих массива, чтобы значения первого массива были ключами, а значения второго массива — значениями.
+
+function mapToObject() {
+    const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+    const ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
+
+    const daysMap = {};
+
+    for (let i = 0; i < en.length; i++) {
+        daysMap[en[i]] = ru[i];
+    }
+
+    console.log(daysMap);
 }
