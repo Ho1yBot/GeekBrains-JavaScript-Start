@@ -406,3 +406,57 @@ function mapToObject() {
 
     console.log(daysMap);
 }
+
+
+
+
+// 1. Найти по id, используя getElementById, элемент с id равным "super_link" и вывести этот элемент в консоль.
+
+const getEl = document.getElementById("super_link");
+console.log(getEl);
+
+// 2. Внутри всех элементов на странице, которые имеют класс "card-link", поменяйте текст внутри элемента на "ссылка".
+
+const cardLinkAll = document.querySelectorAll(".card-link");
+cardLinkAll.forEach((item) => {
+    // item.textContent = "Ссылка"
+})
+
+// 3. Найти все элементы на странице с классом "card-link", которые лежат в элементе с классом "card-body" и вывести полученную коллекцию в консоль.
+
+const getLinkInBody = document.querySelectorAll('.card-body .card-link');
+getLinkInBody.forEach((item) => {
+    console.log(item);
+})
+
+
+// 4. Найти первый попавшийся элемент на странице у которого есть атрибут data-number со значением 50 и вывести его в консоль.
+
+const findNumberFifty = document.querySelector('[data-number="50"]');
+console.log(findNumberFifty);
+
+// 5. Выведите содержимое тега title в консоль.
+
+const pageTitle = document.title;
+console.log(pageTitle);
+// Другой способ
+const titleElement = document.querySelector('title');
+const pageTitlee = titleElement.textContent;
+console.log(pageTitlee);
+
+// 6. Получите элемент с классом "card-title" и выведите его родительский узел в консоль.
+
+const getCardTitle = document.querySelector('.card-title');
+console.log(getCardTitle.parentElement);
+
+// 7. Создайте тег p, запишите внутри него текст "Привет" и добавьте созданный тег в начало элемента, который имеет класс "card".
+
+const createP = document.createElement('p');
+createP.textContent = 'Привет';
+const getCard = document.querySelector('.card');
+getCard.prepend(createP);
+
+// 8. Удалите тег h6 на странице.
+
+const getHSix = document.querySelector('h6');
+getHSix.remove();
