@@ -413,7 +413,7 @@ function mapToObject() {
 // 1. Найти по id, используя getElementById, элемент с id равным "super_link" и вывести этот элемент в консоль.
 
 const getEl = document.getElementById("super_link");
-console.log(getEl);
+// console.log(getEl);
 
 // 2. Внутри всех элементов на странице, которые имеют класс "card-link", поменяйте текст внутри элемента на "ссылка".
 
@@ -426,28 +426,28 @@ cardLinkAll.forEach((item) => {
 
 const getLinkInBody = document.querySelectorAll('.card-body .card-link');
 getLinkInBody.forEach((item) => {
-    console.log(item);
+    // console.log(item);
 })
 
 
 // 4. Найти первый попавшийся элемент на странице у которого есть атрибут data-number со значением 50 и вывести его в консоль.
 
 const findNumberFifty = document.querySelector('[data-number="50"]');
-console.log(findNumberFifty);
+// console.log(findNumberFifty);
 
 // 5. Выведите содержимое тега title в консоль.
 
 const pageTitle = document.title;
-console.log(pageTitle);
+// console.log(pageTitle);
 // Другой способ
 const titleElement = document.querySelector('title');
 const pageTitlee = titleElement.textContent;
-console.log(pageTitlee);
+// console.log(pageTitlee);
 
 // 6. Получите элемент с классом "card-title" и выведите его родительский узел в консоль.
 
 const getCardTitle = document.querySelector('.card-title');
-console.log(getCardTitle.parentElement);
+// console.log(getCardTitle.parentElement);
 
 // 7. Создайте тег p, запишите внутри него текст "Привет" и добавьте созданный тег в начало элемента, который имеет класс "card".
 
@@ -460,3 +460,53 @@ getCard.prepend(createP);
 
 const getHSix = document.querySelector('h6');
 getHSix.remove();
+
+
+// Последний семинар
+const mainText = document.querySelector(".text");
+
+// соседний элемент h2
+// console.log(mainText.previousElementSibling);
+// // родительский элемент .content
+// console.log(mainText.parentElement.parentElement);
+// // вывести картинку
+// console.log(mainText.parentElement.previousElementSibling);
+// // родительский элемент elem
+// console.log(mainText.parentElement.parentElement.parentElement);
+
+// С помощью querySelector найти элемент h2 и вывести всех его родителей
+let parentsOfH2 = document.querySelector(".subtitle2");
+for (let i = 0; i < 3; i++) {
+    parentsOfH2 = parentsOfH2.parentElement;
+    console.log(parentsOfH2);
+}
+const h2 = document.querySelector('.subtitle2');
+let parent = h2.parentElement;
+while (parent) {
+    console.log(parent);
+    parent = parent.parentElement;
+}
+
+
+// 1. Дано поле ввода и кнопка отправить, необходим реализовать
+// функционал, если пользователь нажимает на кнопку отправить, а
+// поле ввода пустое, то под полем ввода и кнопкой должен появиться
+// заголовок h2 с текстом вы не заполнили поле ввода
+// 2. Цвет у рамки сделать красным
+const buttonSend = document.querySelector(".btn");
+const takeInput = document.querySelector('.input');
+function onClick(){
+    if (takeInput.value === ''){
+        const error = document.createElement('h2');
+        error.textContent = 'Ошибкааа!';
+        buttonSend.insertAdjacentElement("afterend", error);
+        takeInput.style.border = "solid red";       
+    }
+}
+buttonSend.onclick=onClick
+
+
+
+
+
+
